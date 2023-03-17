@@ -10,7 +10,10 @@ int main(void)
 	int i;
 
 	for (i = 0; i < 16 ; i++)
-		putchar((i % 16) + '0');
+		if(i < 10)
+			putchar((i % 16) + '0');
+		else
+			putchar((i%16)+'W');
 
 	putchar('\n');
 
