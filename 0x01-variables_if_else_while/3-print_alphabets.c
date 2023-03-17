@@ -1,8 +1,3 @@
-/*
- * File: 3-alphABET
- * Auth: achraf ibn cheikh
- */
-
 #include <stdio.h>
 
  /**
