@@ -1,4 +1,4 @@
-i/*
+/*
  * File: 3-alphABET
  * Auth: achraf ibn cheikh
  */
