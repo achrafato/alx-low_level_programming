@@ -9,11 +9,11 @@ int main(void)
 {
 	int i, j, k;
 
-	for(k = 0; k < 8; k++)
+	for (k = 0; k < 8; k++)
 	{
 		for (i = k + 1; i < 9 ; i++)
 		{
-			for(j = i + 1 ; j <= 9; j++)
+			for (j = i + 1 ; j <= 9; j++)
 			{
 				putchar(k + '0');
 				putchar(i + '0');
@@ -24,9 +24,9 @@ int main(void)
 
 				putchar(',');
 				putchar(' ');
-			} 
+			}
 		}
-	} 
+	}
 
 	putchar('\n');
 
