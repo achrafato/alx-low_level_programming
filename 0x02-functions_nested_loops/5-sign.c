@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
 * print_sign - Check if number is positive or negative
 * @n: number to be verified
