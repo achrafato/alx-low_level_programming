@@ -12,7 +12,7 @@ if (n >= 0)
 {
 return (n);
 }
-else(n < 0)
+else
 {
 return (-n);
 }
