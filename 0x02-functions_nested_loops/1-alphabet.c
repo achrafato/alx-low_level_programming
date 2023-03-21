@@ -18,7 +18,7 @@ int i;
 char alphat[] = "abcdefghijklmnopqrstuvwxyz";
 for (i = 0; i < 26; i++)
 {
-_putchar("%c",alphat[i]);
+_putchar(alphat[i]);
 }
-_putchar("\n");
+_putchar('\n');
 }
