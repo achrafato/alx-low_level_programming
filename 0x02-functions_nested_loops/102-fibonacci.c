@@ -1,24 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-*main - prints count of multiples
-*of 3 or 5 below 1024
+*main - prints the first 50 Fibonacci numbers, starting with 1 and 2
+*
 *Return: return 0
 */
 int main(void)
 {
 
-int i, current, prev, next;
+long int i, current, prev, next;
 
 prev = 1;
 current = 2;
 
 printf("1, ");
 printf("2, ");
-for (i = 0; i < 50; i++)
+for (i = 1; i < 49; i++)
 {
 next = prev + current;
-printf("%d, ", next);
+if (i == 48)
+{
+printf("%lu", next);
+exit(0);
+}
+printf("%lu, ", next);
 prev = current;
 current = next;
 }
