@@ -24,19 +24,19 @@ if (j != 0)
 {
 if ((i * j) <= 9)
 {
-printf(",   ");
+printf(",...");
 }
 else if ((i * j) >= 100)
 {
-printf(", ");
+printf(",.");
 }
 else
 {
-printf(",  ");
-}
+printf(",..");
 }
 }
 printf("%d", (i * j));
+}
 printf("\n");
 }
 }
