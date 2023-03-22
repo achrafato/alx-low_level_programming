@@ -19,7 +19,7 @@ for (col = 0; col < 10; col++)
 int mult = row * col;
 if (mult <= 9)
 {
-_putchar('   ');
+_putchar(' ');
 }
 else
 {
