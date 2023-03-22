@@ -21,7 +21,7 @@ for (i = 1; i < 49; i++)
 next = prev + current;
 if (i == 48)
 {
-printf("%lu", next);
+printf("%lu\n", next);
 exit(0);
 }
 printf("%lu, ", next);
