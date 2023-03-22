@@ -9,7 +9,7 @@
 int main(void)
 {
 
-long int i, current, prev, next;
+unsigned long i, current, prev, next;
 
 prev = 1;
 current = 2;
