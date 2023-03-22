@@ -9,25 +9,25 @@
 
 void print_times_table(int n)
 {
+int i, j;
+
 if (n > 15 || n < 0)
 {
 exit(0);
 }
 
-int ii, jj;
-
-for (ii = 0; ii <= n; ii++)
+for (i = 0; i <= n; i++)
 {
-for (jj = 0; jj <= n; jj++)
+for (j = 0; j <= n; j++)
 {
-printf("%d", (ii * jj));
-if (jj != n)
+printf("%d", (i * j));
+if (j != n)
 {
-if ((ii * jj) <= 9)
+if ((i * j) <= 9)
 {
 printf(",   ");
 }
-else if ((ii * jj) >= 100)
+else if ((i * j) >= 100)
 {
 printf(", ");
 }
