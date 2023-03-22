@@ -20,8 +20,7 @@ for (i = 0; i <= n; i++)
 {
 for (j = 0; j <= n; j++)
 {
-printf("%d", (i * j));
-if (j != n)
+if (j != 0)
 {
 if ((i * j) <= 9)
 {
@@ -37,6 +36,7 @@ printf(",  ");
 }
 }
 }
+printf("%d", (i * j));
 printf("\n");
 }
 }
