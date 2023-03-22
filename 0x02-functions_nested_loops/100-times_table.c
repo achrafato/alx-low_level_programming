@@ -14,20 +14,20 @@ if (n > 15 || n < 0)
 exit(0);
 }
 
-int i, j;
+int ii, jj;
 
-for (i = 0; i <= n; i++)
+for (ii = 0; ii <= n; ii++)
 {
-for (j = 0; j <= n; j++)
+for (jj = 0; jj <= n; jj++)
 {
-printf("%d", (i * j));
-if (j != n)
+printf("%d", (ii * jj));
+if (jj != n)
 {
-if ((i * j) <= 9)
+if ((ii * jj) <= 9)
 {
 printf(",   ");
 }
-else if ((i * j) >= 100)
+else if ((ii * jj) >= 100)
 {
 printf(", ");
 }
