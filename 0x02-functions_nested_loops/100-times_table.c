@@ -10,6 +10,7 @@ void print_times_table(int n)
 {
 if (n > 15 || n < 0)
 {
+printf("");
 return (0);
 }
 
@@ -24,15 +25,15 @@ if (j != n)
 {
 if ((i * j) <= 9)
 {
-printf(",  ");
+printf(",   ");
 }
 else if ((i * j) >= 100)
 {
-printf(",");
+printf(", ");
 }
 else
 {
-printf(", ");
+printf(",  ");
 }
 }
 }
