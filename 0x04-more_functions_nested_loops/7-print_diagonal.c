@@ -15,14 +15,14 @@ for (i = 1; i <= n; i++)
 {
 for (j = 1; j <= i - 1; j++)
 {
-putchar(' ');
+_putchar(' ');
 }
-putchar(92);
-putchar(10);
+_putchar(92);
+_putchar(10);
 }
 }
 else
 {
-putchar(10);
+_putchar(10);
 }
 }
