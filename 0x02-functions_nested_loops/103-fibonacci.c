@@ -27,9 +27,7 @@ prev = current;
 current = next;
 }
 
-printf("\n");
-
-printf("%lu", sum);
+printf("%lu\n", sum);
 
 return (0);
 }
