@@ -13,22 +13,16 @@ if (!(n <= 0))
 {
 for (i = 1; i <= n; i++)
 {
-for (j = 1; j <= n; j++)
+for (j = 1; j <= i - 1; j++)
 {
-if (j == i)
-{
-_putchar('\\');
+putchar(' ');
 }
-else
-{
-_putchar(' ');
-}
-}
-_putchar(10);
+putchar(92);
+putchar(10);
 }
 }
 else
 {
-_putchar(10);
+putchar(10);
 }
 }
