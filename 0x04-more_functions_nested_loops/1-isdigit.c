@@ -7,8 +7,7 @@
 
 int _isdigit(int c)
 {
-int ascii = c + '0';
-if (ascii >= 48 && ascii <= 57)
+if ((c + '0') >= 48 && (c + '0') <= 57)
 {
 return (1);
 }
