@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - prints the largest prime factor of the number 612852475143
@@ -25,7 +26,7 @@ n = n / i;
 }
 
 if (n > 2)
-printf("%d\n", n);
+printf("%ld\n", n);
 
 return (0);
 }
