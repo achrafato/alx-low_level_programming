@@ -1,5 +1,5 @@
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * rev_string - swap numbers
  *@s: char that pointing to the string to be reversed
