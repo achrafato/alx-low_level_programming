@@ -7,10 +7,11 @@
 
 void rev_string(char *s)
 {
-int size = strlen(s);
-char newS[strlen(s)];
-int i, j;
+int i, j, index, size;
 j = 0;
+while (s[index++])
+size++;
+char newS[size];
 for (i = size - 1; i >= 0; i--)
 {
 newS[j] = s[i];
