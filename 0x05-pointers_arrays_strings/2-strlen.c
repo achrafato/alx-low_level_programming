@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * _strlen - measure the lenght of char
  *@s: pointing to char that will be measured
