@@ -1,3 +1,5 @@
+#include <string.h>
+
 /**
  * rev_string - swap numbers
  *@s: char that pointing to the string to be reversed
@@ -7,7 +9,7 @@ void rev_string(char *s)
 {
 int i, j;
 j = 0;
-char newS[5];
+char newS[strlen(s)];
 for (i = strlen(s) - 1; i >= 0; i--)
 {
 newS[j] = s[i];
