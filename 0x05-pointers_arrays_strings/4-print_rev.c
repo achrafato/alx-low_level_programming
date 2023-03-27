@@ -3,11 +3,11 @@
 #include "main.h"
 
 /**
- * _puts - prints a string in reverse order
+ * print_rev - prints a string in reverse order
  *@str: pointing to the string that will be printed
  */
 
-void _puts(char *str)
+void print_rev(char *str)
 {
 	int i;
 
