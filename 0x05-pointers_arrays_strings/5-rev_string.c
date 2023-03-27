@@ -11,7 +11,7 @@ int i, j, index, size;
 j = 0;
 while (s[index++])
 size++;
-char newS[size];
+char *newS = (char *)malloc(size *sizeof(char));
 for (i = size - 1; i >= 0; i--)
 {
 newS[j] = s[i];
@@ -24,4 +24,5 @@ while (i <= size - 1)
 s[i] = newS[i];
 i++;
 }
+free(newS);
 }
