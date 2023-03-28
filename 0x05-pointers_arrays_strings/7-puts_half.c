@@ -7,8 +7,13 @@
 
 void puts_half(char *str)
 {
+int index;
 int size = strlen(str);
-int index = size / 2;
+
+if (size % 2 == 0)
+index = size / 2;
+else
+index = (size - 1) / 2;
 
 while (index < size)
 {
