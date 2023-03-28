@@ -13,7 +13,7 @@ int size = strlen(str);
 if (size % 2 == 0)
 index = size / 2;
 else
-index = (size - 1) / 2;
+index = (size + 1) / 2;
 
 while (index < size)
 {
