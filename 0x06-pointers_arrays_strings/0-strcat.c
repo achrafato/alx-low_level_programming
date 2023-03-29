@@ -17,5 +17,6 @@ dest[size1] = *src;
 src++;
 size1++;
 }
+dest[size1] = '\0';
 return (dest);
 }
