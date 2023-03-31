@@ -1,34 +1,20 @@
 #include "main.h"
+
 /**
  * print_number - prints an integer
  * @n: integer to be print
  */
- 
+
 void print_number(int n)
 {
-int last, first, crat = 0;   
-unsigned int num = n;
-
-if (num == 0)
-{
-_putchar('0');
-}
 if (n < 0)
 {
 _putchar('-');
-num = -n; 
+n *= -1;
 }
-
-while(num > 0)
+if (n / 10 != 0)
 {
-last = num % 10;
-crat = crat * 10 + last;
-num /= 10;
+print_number(n / 10);
 }
-while(crat > 0)
-{
-first = crat % 10;
-_putchar(first + '0');
-crat /= 10;
-}
+_putchar((n % 10) + '0');
 }
