@@ -6,6 +6,7 @@
 
 void print_number(int n)
 {
+unsigned int num;
 int last, first, crat = 0;
 if (n == 0)
 {
@@ -14,14 +15,14 @@ _putchar('0');
 if (n < 0)
 {
 _putchar('-');
-n *= -1;
+num = -n;
 }
 
-while (n > 0)
+while (num > 0)
 {
-last = n % 10;
+last = num % 10;
 crat = crat * 10 + last;
-n /= 10;
+num /= 10;
 }
 while (crat > 0)
 {
