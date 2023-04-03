@@ -12,7 +12,7 @@ if (*s == c)
 {
 return (s);
 }
-s++;
+++s;
 }
 return (0);
 }
