@@ -15,7 +15,7 @@ int sum = 0;
 if (argc == 1)
 {
 	printf("%i\n", 0);
-	return (0);
+	return (1);
 }
 for (i = 1; i < argc; i++)
 {
