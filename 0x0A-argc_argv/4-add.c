@@ -12,8 +12,11 @@ int main(int argc, char *argv[])
 int i;
 int sum = 0;
 
-if (argc > 1)
+if (argc == 1)
 {
+	printf("0\n");
+	return (0);
+}
 for (i = 1; i < argc; i++)
 {
 char *str = argv[i];
@@ -29,10 +32,7 @@ return (1);
 }
 }
 printf("%d\n", sum);
-}
-else
-{
-printf("%d\n", sum);
-}
+
+
 return (0);
 }
