@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-int main(int argc, char* argv[])
+/**
+ * main - prints the file name
+ * @argv: An array containing the program command line arguments
+ * @argc: contain the length of command line arguments
+ * Return: 0.
+ */
+
+int main(int argc __attribute__((unused)), char* argv[])
 {
-	int i = argc;
- 	i = 0;
-	while (i < 1)
-	{
+
 		printf("%s\n",argv[0]);
-		i++;
-	}
 
 	return (0);
 }
