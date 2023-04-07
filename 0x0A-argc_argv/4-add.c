@@ -14,8 +14,8 @@ int sum = 0;
 
 if (argc == 1)
 {
-	printf("%i\n", 0);
-	return (1);
+	printf("0\n");
+	return (0);
 }
 for (i = 1; i < argc; i++)
 {
@@ -31,6 +31,6 @@ printf("Error\n");
 return (1);
 }
 }
-printf("%i\n", sum);
+printf("%d\n", sum);
 return (0);
 }
