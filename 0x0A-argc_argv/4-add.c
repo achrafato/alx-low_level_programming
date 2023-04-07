@@ -12,13 +12,17 @@ int main(int argc, char *argv[])
 
 int i;
 int sum = 0;
-
+int signal = 0;
 if (argc > 1)
 {
 for (i = 1; i < argc; i++)
 {
 char *str = argv[i];
-if (*str >= 48 && *str <= 57)
+if (atoi(argv[i]) < 0)
+{
+signal += atoi(argv[i]);
+}
+else if (*str >= 48 && *str <= 57 && *str >= 0)
 {
 sum += atoi(argv[i]);
 }
@@ -28,7 +32,7 @@ printf("Error\n");
 return (1);
 }
 }
-printf("%d\n", sum);
+printf("%d\n", sum + signal);
 }
 else
 {
