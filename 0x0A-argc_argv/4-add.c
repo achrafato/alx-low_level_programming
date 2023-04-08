@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - adds positive numbers
  * @argv: An array containing the program command line arguments
@@ -19,9 +20,8 @@ if (argc == 1)
 }
 for (i = 1; i < argc; i++)
 {
-char *str = argv[i];
 
-if (*str >= 48 && *str <= 57)
+if (isdigit(argv[i][0]))
 {
 sum += atoi(argv[i]);
 }
