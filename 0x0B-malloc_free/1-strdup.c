@@ -17,7 +17,7 @@ if (str == NULL)
 {
 return (NULL);
 }
-st = malloc(sizeof(char) * strlen(str));
+st = malloc(sizeof(char) * strlen(str) + 1);
 
 if (st == NULL)
 {
