@@ -24,18 +24,17 @@ if (st == NULL)
 {
 return (NULL);
 }
+
 for (i = 0; i < height; i++)
 {
 st[i] = (int *)malloc(sizeof(int) * width);
-
 if (st[i] == NULL)
 {
 for (j = 0; j < i; j++)
 {
-free(st[i]);
+free(st[j]);
 }
 free(st);
-}
 }
 }
 
@@ -46,7 +45,6 @@ for (j = 0; j < width; j++)
 st[i][j] = 0;
 }
 }
-
 return (st);
 
 }
