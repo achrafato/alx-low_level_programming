@@ -24,7 +24,7 @@ len++;
 }
 len += 1; /* +1 for newline character*/
 }
-st = malloc(sizeof(char) * len);
+st = malloc(sizeof(char) * len + 1);
 
 if (st == NULL)
 {
