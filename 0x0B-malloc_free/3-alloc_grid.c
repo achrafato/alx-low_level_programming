@@ -18,7 +18,7 @@ if (width <= 0 || height <= 0)
 return (NULL);
 }
 
-st = (int **)malloc(sizeof(int) * height);
+st = (int **)malloc(sizeof(int *) * height);
 
 if (st == NULL)
 {
