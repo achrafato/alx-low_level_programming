@@ -17,7 +17,7 @@ if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-s = malloc(sizeof(char) * (n + 1));
+s = (char *)malloc(sizeof(char) * (n + 1));
 
 while (s1[len1] != '\0')
 {
