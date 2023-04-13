@@ -16,7 +16,9 @@ if (min > max)
 return (NULL);
 }
 
-arr = (int *)calloc(max + 1, sizeof(int));
+arr = (min == 0)
+? (int *)calloc(max + 1, sizeof(int))
+: (int *)calloc(max, sizeof(int));
 
 if (arr == NULL)
 return (NULL);
