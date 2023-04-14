@@ -9,23 +9,21 @@
 
 int *array_range(int min, int max)
 {
-int *arr, i, j = 0;
+int *arr, t, i;
 
 if (min > max)
 {
-return (NULL);
+	return (NULL);
 }
-
-arr = (min == 0)
-? (int *)calloc(max + 1, sizeof(int))
-: (int *)calloc(max, sizeof(int));
+	t = (max - min) + 1;
+	arr = (int *)calloc(t, sizeof(int));
 
 if (arr == NULL)
-return (NULL);
-for (i = min; i <= max; i++, j++)
+	return (NULL);
+for (i = 0; i < t; i++)
 {
-arr[j] = i;
+	arr[i] = min++;
 }
 
-return (arr);
+	return (arr);
 }
