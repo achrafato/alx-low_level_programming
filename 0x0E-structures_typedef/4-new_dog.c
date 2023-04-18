@@ -49,6 +49,8 @@ if (d == NULL)
 {
 return (NULL);
 }
+if (name != NULL)
+{
 d->name = malloc(_strlen(name) + 1);
 if (d->name == NULL)
 {
@@ -56,7 +58,14 @@ free(d);
 return (NULL);
 }
 _strcpy(d->name, name);
-
+}
+else
+{
+d->name = NULL;
+}
+d->age = age;
+if (owner != NULL)
+{
 d->owner = malloc(_strlen(owner) + 1);
 if (d->owner == NULL)
 {
@@ -64,10 +73,11 @@ free(d->name);
 free(d);
 return (NULL);
 }
-
 _strcpy(d->owner, owner);
-
-d->age = age;
-
+}
+else
+{
+d->owner = NULL;
+}
 return (d);
 }
