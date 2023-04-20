@@ -40,6 +40,7 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 			separator = 0;
+			break;
 		}
 		if (i < (len - 1) && separator == 1)
 			printf(", ");
