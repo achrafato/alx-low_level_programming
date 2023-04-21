@@ -8,7 +8,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, len, separator = 1;
+	int i = 0, len;
 	va_list ptr;
 	char *s;
 
@@ -18,7 +18,6 @@ void print_all(const char * const format, ...)
 	va_start(ptr, format);
 	while (i < len && format != NULL)
 	{
-		separator = 1;
 		switch (format[i])
 		{
 			case 'c':
@@ -38,11 +37,9 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s);
 				break;
-			default:
-			separator = 0;
-			break;
 		}
-		if (i < (len - 1) && separator == 1)
+		if ((format[i + 1] == 'c' || format[i + 1] == 'f' || format[i + 1] == 'i'
+					|| format[i + 1] == 's') && i < (len - 1))
 			printf(", ");
 		i++;
 	}
