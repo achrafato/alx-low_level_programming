@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stddef.h>
+#include <string.h>
 
 /**
  * print_all - prints strings separated by separators
@@ -8,15 +9,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, len;
+	int i = 0;
 	va_list ptr;
 	char *s;
 
-	while (format[i] != '\0')
-		i++;
-	len = i, i = 0;
 	va_start(ptr, format);
-	while (i < len && format != NULL)
+	while (format && format[i])
 	{
 		switch (format[i])
 		{
@@ -39,7 +37,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if ((format[i + 1] == 'c' || format[i + 1] == 'f' || format[i + 1] == 'i'
-					|| format[i + 1] == 's') && i < (len - 1))
+					|| format[i + 1] == 's') && (size_t)i < (strlen(format) - 1))
 			printf(", ");
 		i++;
 	}
