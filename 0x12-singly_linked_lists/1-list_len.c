@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * add_node - add new node
- * @h: pointer to struct which to be
- * Return: number of the address nodes.
+ * list_len - loop through linked list and return number of nodes
+ * @h: pointer to struct
+ * Return: number of  nodes.
  */
 size_t list_len(const list_t *h)
 {
