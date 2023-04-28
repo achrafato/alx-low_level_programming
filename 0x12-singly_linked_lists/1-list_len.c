@@ -1,18 +1,19 @@
 #include "lists.h"
-/**
- * list_len - loop through linkedList and return the number of nodes
- * @h: pointer to struct which to be printed
- * Return: number of nodes.
- */
 
+/**
+ * list_len - determines length of linked list
+ * @h: pointer to first node
+ *
+ * Return: size of list
+ */
 size_t list_len(const list_t *h)
 {
-unsigned int n = 0;
+	size_t i = 0;
 
-while (h != NULL)
-{
-n++;
-h = h->next;
-}
-return (n);
+	while (h)
+	{
+		h = h->next;
+		i++;
+	}
+	return (i);
 }
