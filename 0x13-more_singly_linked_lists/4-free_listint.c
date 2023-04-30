@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listint - add new node at the end
+ * free_listint -  free linkedList
  * @head: pointer to struct
  */
 
