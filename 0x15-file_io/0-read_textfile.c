@@ -17,16 +17,17 @@ char *buffer;
 if (filename == NULL)
 return (0);
 
+buffer = malloc(letters);
+if (buffer == NULL)
+	return (0);
 fo = open(filename, O_RDONLY);
 
 if (fo == -1)
 {
+free(buffer);
 return (-1);
 }
 
-buffer = malloc(letters);
-if (buffer == NULL)
-	return (0);
 fr = read(fo, buffer, letters);
 
 if (fr == -1)
