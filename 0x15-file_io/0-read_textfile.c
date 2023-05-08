@@ -25,6 +25,8 @@ return (-1);
 }
 
 buffer = malloc(letters);
+if (buffer == NULL)
+	return (0);
 fr = read(fo, buffer, letters);
 
 if (fr == -1)
