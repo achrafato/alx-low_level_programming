@@ -10,7 +10,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fo, fr, fw;
+int fo, fr;
+ssize_t fw;
 char *buffer;
 
 if (filename == NULL)
@@ -33,7 +34,7 @@ return (-1);
 }
 
 fw = write(STDOUT_FILENO, buffer, fr);
-if (fw == -1 || fw != fr)
+if (fw == -1 || fw != (ssize_t)fr)
 {
 free(buffer);
 return (0);
