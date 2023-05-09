@@ -48,9 +48,10 @@ char buffer[1024];
 	while ((fr = read(fo1, buffer, 1024)) > 0)
 	{
 		fw = write(fo2, buffer, fr);
-		if (fw == -1 || fw != fr)
-			check_status(0, fw, av);
 	}
+
+	if (fw == -1 || fw != fr)
+		check_status(0, fw, av);
 
 	if (fr == -1)
 		check_status(fr, 0, av);
