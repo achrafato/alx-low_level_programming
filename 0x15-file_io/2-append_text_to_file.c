@@ -33,7 +33,7 @@ int append_text_to_file(const char *filename, char *text_content)
 			i++;
 	}
 
-	fa  = write (fo, text_content, i);
+	fa  = write(fo, text_content, i);
 
 	if (fa == -1 || fa != i)
 	{
