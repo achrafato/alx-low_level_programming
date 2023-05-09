@@ -41,18 +41,19 @@ char buffer[1024];
 		exit(97);
 	}
 	fo2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	check_status(0, fo2, av);
 	fo1 = open(av[1], O_RDONLY);
-	check_status(fo1, fo2, av);
+	check_status(fo1, 0, av);
 
 	while ((fr = read(fo1, buffer, 1024)) > 0)
 	{
-		if (fr == -1)
-			check_status(fr, 0, av); 
 
 		fw = write(fo2, buffer, fr);
 		if (fw == -1 || fr != fw)
 			check_status(0, fw, av);
 	}
+	if (fr == -1)
+		check_status(fr, 0, av);
 
 	if (close(fo2) == -1)
 	{
