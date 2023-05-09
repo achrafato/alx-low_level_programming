@@ -23,6 +23,7 @@ void check_status(int fo1, int fo2, char *av[])
 	if (fo2 == -1)
 	{
 		close(fo2);
+		close(fo1);
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
@@ -36,7 +37,7 @@ void check_status(int fo1, int fo2, char *av[])
  */
 int main(int ac, char *av[])
 {
-int fo1, fo2, fr, fw;
+int fo1 = 0, fo2 = 0, fr = 0, fw = 0;
 char buffer[1024];
 	if (ac != 3)
 	{
@@ -44,7 +45,7 @@ char buffer[1024];
 		exit(97);
 	}
 	fo2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	check_status(0, fo2, av);
+	check_status(fo1, fo2, av);
 	fo1 = open(av[1], O_RDONLY);
 	check_status(fo1, fo2, av);
 
@@ -54,7 +55,7 @@ char buffer[1024];
 	}
 
 	if (fw == -1 || fw != fr)
-		check_status(0, fw, av);
+		check_status(fr, fw, av);
 
 	if (fr == -1)
 		check_status(fr, fw, av);
