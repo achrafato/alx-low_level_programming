@@ -51,7 +51,7 @@ char buffer[1024];
 			check_status(fr, 0, av);
 
 		fw = write(fo2, buffer, fr);
-		if (fw == -1)
+		if (fw == -1 || fw != fr)
 			check_status(0, fw, av);
 	}
 
