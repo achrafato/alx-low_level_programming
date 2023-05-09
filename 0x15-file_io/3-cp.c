@@ -44,13 +44,16 @@ char buffer[1024];
 	fo1 = open(av[1], O_RDONLY);
 	check_status(fo1, fo2, av);
 
-	fr = read(fo1, buffer, 1024);
+	while ((fr = read(fo1, buffer, 1024)) > 0)
+	{
+
+		fw = write(fo2, buffer, fr);
+		if (fw == -1 || fr != fw)
+			check_status(0, fw, av);
+	}
+
 	if (fr == -1)
 		check_status(fr, 0, av);
-
-	fw = write(fo2, buffer, fr);
-	if (fw == -1 || fr != fw)
-		check_status(0, fw, av);
 	if (close(fo2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fo2);
