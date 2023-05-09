@@ -50,10 +50,10 @@ char buffer[1024];
 		fw = write(fo2, buffer, fr);
 		if (fw == -1 || fr != fw)
 			check_status(0, fw, av);
+		if (fr == -1)
+			check_status(fr, 0, av);
 	}
 
-	if (fr == -1)
-		check_status(fr, 0, av);
 	if (close(fo2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fo2);
