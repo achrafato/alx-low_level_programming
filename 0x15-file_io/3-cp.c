@@ -48,8 +48,8 @@ char buffer[1024];
 	if (fr == -1)
 		check_status(fr, 0, av);
 
-	fw = write(fo2, buffer, 1024);
-	if (fw == -1)
+	fw = write(fo2, buffer, fr);
+	if (fw == -1 || fr != fw)
 		check_status(0, fw, av);
 	if (close(fo2) == -1)
 	{
