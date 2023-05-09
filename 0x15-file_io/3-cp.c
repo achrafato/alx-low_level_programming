@@ -15,6 +15,7 @@ void check_status(int fo1, int fo2, char *av[])
 	if (fo1 == -1)
 	{
 		close(fo1);
+		close(fo2);
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
@@ -45,7 +46,7 @@ char buffer[1024];
 	fo2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	check_status(0, fo2, av);
 	fo1 = open(av[1], O_RDONLY);
-	check_status(fo1, 0, av);
+	check_status(fo1, fo2, av);
 
 	while ((fr = read(fo1, buffer, 1024)) > 0)
 	{
@@ -56,7 +57,7 @@ char buffer[1024];
 		check_status(0, fw, av);
 
 	if (fr == -1)
-		check_status(fr, 0, av);
+		check_status(fr, fw, av);
 	if (close(fo2) == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fo2);
